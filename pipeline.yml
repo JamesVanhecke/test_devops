@@ -1,0 +1,13 @@
+trigger: none
+pr: none
+stages:
+- stage: Test
+  jobs:
+  - job: Test
+    steps:
+    - task: Bash@3
+      displayName: 'My command'
+      inputs:
+        targetType: 'inline'
+        script: |
+          echo test
